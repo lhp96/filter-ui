@@ -12,8 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@iconify-json/ic": "1.1.4",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitejs/plugin-vue-jsx": "2.0.0",
+    "unocss": "0.45.6",
     "vite": "3.0.7"
   },
   "dependencies": {
