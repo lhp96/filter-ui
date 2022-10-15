@@ -20,7 +20,8 @@
     "@vitejs/plugin-vue-jsx": "2.0.0",
     "unocss": "0.45.6",
     "vite": "3.0.7",
-    "vitepress": "0.22.4"
+    "vitepress": "0.22.4",
+    "vitepress-theme-demoblock": "1.4.2"
   },
   "dependencies": {
     "vue": "3.2.37"
