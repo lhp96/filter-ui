@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../dist/entry.css" />
     <title>Filter-UI</title>
   </head>
   <body>
@@ -18,7 +19,8 @@
 
       createApp({
         template: `
-        <SButton/>
+        <SButton>普通</SButton>
+        <SButton color="red" round plain icon="delete" ></SButton>
         <SFCButton/>`,
       })
         .use(SmartyUI)

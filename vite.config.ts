@@ -9,6 +9,7 @@ const rollupOptions = {
     globals: {
       vue: "Vue",
     },
+    assetFileNames: `[name].css`,
   },
 };
 
@@ -23,5 +24,6 @@ export default defineConfig({
       fileName: "filter-ui",
       formats: ["esm", "umd", "iife"],
     },
+    cssCodeSplit: true,
   },
 });
