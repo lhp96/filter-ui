@@ -1,15 +1,16 @@
 {
-  "name": "filter-ui",
+  "name": "docs-vite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "3.0.7"
+    "filter-ui": "workspace:^1.0.0",
+    "vue": "3.2.37"
   }
 }
