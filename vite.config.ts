@@ -17,7 +17,9 @@ export default defineConfig({
   plugins: [vue(), vueJsx({}), Unocss()],
   build: {
     rollupOptions,
-    minify: false,
+    minify: "terser",
+    sourcemap: true,
+    brotliSize: true,
     lib: {
       entry: "./src/entry.ts",
       name: "FilterUI",
