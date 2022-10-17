@@ -19,8 +19,8 @@
     "@vitejs/plugin-vue": "3.0.3",
     "@vitejs/plugin-vue-jsx": "2.0.0",
     "terser": "5.4.0",
-    "unocss": "0.45.6",
-    "vite": "3.0.7",
+    "unocss": "0.45.22",
+    "vite": "3.0.9",
     "vitepress": "0.22.4",
     "vitepress-theme-demoblock": "1.4.2"
   },

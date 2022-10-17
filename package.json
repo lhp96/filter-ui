@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "3.0.7"
+    "vite": "3.0.9"
   }
 }
