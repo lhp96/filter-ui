@@ -1,7 +1,5 @@
 import { createApp } from "vue/dist/vue.esm-browser";
-import SButton from "./button";
 import FilterUI from "./entry";
-import SFCButton from "./SFCButton.vue";
 
 // createApp(SFCButton).mount("#app");
 createApp({
