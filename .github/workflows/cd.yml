@@ -65,7 +65,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "dist/"
+          source: "docs/.vitepress/dist/"
           target: "/app/vitepress"
 
       # 复制新的
