@@ -26,7 +26,7 @@ jobs:
       # 安装依赖。命中缓存则跳过此步
       - name: Installing Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: pnpm install
+        run: yarn install
       # 从package.json里获取version属性的值
       # 在CD Workflow中会给每个生成的制品打上标签，而标签取值于version值
       # - name: Read Version
@@ -39,7 +39,7 @@ jobs:
       # 打包生成制品，且把制品压缩到assets.zip压缩包里
       - name: Building
         run: |
-          pnpm docs:build
+          yarn docs:build
           zip -r assets ./docs/.vitepress/dist/**
       # 查看打包后的目录文件
       - name: view directory files
