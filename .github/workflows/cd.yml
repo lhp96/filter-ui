@@ -14,6 +14,15 @@ jobs:
           version: 7.2.1
       - name: Install modules
         run: pnpm install
+      # 从package.json里获取version属性的值
+      # 在CD Workflow中会给每个生成的制品打上标签，而标签取值于version值
+      - name: Read Version
+        # 读取出来的值会放在steps.[id].outputs.value供其他步骤step读取
+        id: version
+        uses: ashley-taylor/read-json-property-action@v1.0
+        with:
+          path: ./package.json
+          property: version
 
       - name: Building
         run: |
