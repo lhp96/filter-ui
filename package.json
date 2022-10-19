@@ -1,7 +1,7 @@
 {
   "name": "filter-ui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "基于Vite+TS+Vue3的定制化组件库",
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",

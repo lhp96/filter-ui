@@ -48,6 +48,7 @@ jobs:
       # 把assets.zip上传到仓库对应的发布版本Release上
       - name: Update Release Asset
         id: upload-release-asset
+        if: contains(github.event.head_commit.message, 'chore(release)')
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
