@@ -3,7 +3,7 @@ const head = [
     "link",
     {
       rel: "icon",
-      href: "https://github.com/lhp96/filter-ui/blob/main/assets/Filter-UI-Logo.png",
+      href: "https://lhp96.oss-cn-hangzhou.aliyuncs.com/lhp/Filter-UI-Logo.png",
     },
   ],
 ];

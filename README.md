@@ -1,7 +1,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://github.com/lhp96/filter-ui/blob/main/assets/Filter-UI-Logo.png" alt="Filter-UI" style="width:200px;"/>
+  <img src="https://lhp96.oss-cn-hangzhou.aliyuncs.com/lhp/Filter-UI-Logo.png" alt="Filter-UI" style="width:200px;"/>
 </p>
 
 <p align="center">
