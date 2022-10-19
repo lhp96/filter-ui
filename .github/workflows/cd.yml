@@ -22,9 +22,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Building
-        run: |
-          pnpm docs:build
+      # - name: Building
+      #   run: |
+      #     pnpm docs:build
       #     zip -r assets ./docs/.vitepress/dist/**
       # 查看打包后的目录文件
       - name: view directory files
@@ -54,26 +54,26 @@ jobs:
       #     asset_name: assets.zip
       #     asset_content_type: application/zip
       # 删除旧的东西
-      - name: Remove old source
-        uses: appleboy/ssh-action@master
-        with:
-          command_timeout: 4m
-          host: ${{ secrets.HOST }} # 服务器host
-          username: ${{ secrets.USERNAME }} # 服务器用户名
-          password: ${{ secrets.PASSWORD }} # 服务器密码
-          script: | # 运行多行命令
-            rm -rf /app/vitepress/dist/*
+      # - name: Remove old source
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     command_timeout: 4m
+      #     host: ${{ secrets.HOST }} # 服务器host
+      #     username: ${{ secrets.USERNAME }} # 服务器用户名
+      #     password: ${{ secrets.PASSWORD }} # 服务器密码
+      #     script: | # 运行多行命令
+      #       rm -rf /app/vitepress/dist/*
 
       # 把制品上传到部署机器
-      - name: Upload to Deploy Server
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "dist/"
-          target: "/app/vitepress"
+      # - name: Upload to Deploy Server
+      #   uses: appleboy/scp-action@master
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     password: ${{ secrets.PASSWORD }}
+      #     port: ${{ secrets.PORT }}
+      #     source: "dist/"
+      #     target: "/app/vitepress"
 
       # 复制新的
       # - name: Copy new source
