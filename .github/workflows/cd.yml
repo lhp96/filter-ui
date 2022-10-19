@@ -77,4 +77,4 @@ jobs:
           username: ${{ secrets.USERNAME }} # 服务器用户名
           password: ${{ secrets.PASSWORD }} # 服务器密码
           script: | # 运行多行命令
-            cp -rf /app/vitepress/dist/* /app/vitepress
+            cp -rf /app/vitepress/docs/.vitepress/dist/* /app/vitepress
