@@ -4,31 +4,30 @@ on:
   push:
     branches: main
 jobs:
+  build:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [15]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+
   CD:
     runs-on: ubuntu-latest
     steps:
       # 拉取代码
       - name: Checkout repository
         uses: actions/checkout@v2
-      # 下载Node
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16.x"
-          cache: "pnpm"
-      # 安装依赖。命中缓存则跳过此步
-      - name: Installing Dependencies
-        run: pnpm install
-      # 从package.json里获取version属性的值
-      # 在CD Workflow中会给每个生成的制品打上标签，而标签取值于version值
-      # - name: Read Version
-      #   # 读取出来的值会放在steps.[id].outputs.value供其他步骤step读取
-      #   id: version
-      #   uses: ashley-taylor/read-json-property-action@v1.0
-      #   with:
-      #     path: ./package.json
-      #     property: version
-      # 打包生成制品，且把制品压缩到assets.zip压缩包里
       - name: Building
         run: |
           pnpm docs:build
