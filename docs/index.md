@@ -6,7 +6,7 @@ hero:
   text: 定制UI组件库
   # tagline: Record my learning and life...
   image:
-    src: ./assets/bighead.svg
+    src: https://lhp96.oss-cn-hangzhou.aliyuncs.com/lhp/bighead.svg
     alt: logo
   actions:
     - theme: brand

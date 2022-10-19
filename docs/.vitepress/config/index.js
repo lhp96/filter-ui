@@ -21,7 +21,7 @@ const config = {
     sidebar,
     nav,
     // demoblock: lang,
-    logo: "https://lhp96.oss-cn-hangzhou.aliyuncs.com/lhp/Filter-UI-Logo.png", // 网站nav栏logo
+    logo: "https://lhp96.oss-cn-hangzhou.aliyuncs.com/lhp/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png", // 网站nav栏logo
     lastUpdated: "Last Updated",
     author: "lhp96", //  作者
     authorAvatar: "/bighead.svg", //  作者头像
