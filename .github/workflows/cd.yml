@@ -22,9 +22,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # - name: Building
-      #   run: |
-      #     pnpm docs:build
+      - name: Building
+        run: |
+          pnpm docs:build
       #     zip -r assets ./docs/.vitepress/dist/**
       # 查看打包后的目录文件
       - name: view directory files
