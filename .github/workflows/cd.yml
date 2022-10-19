@@ -65,15 +65,15 @@ jobs:
             rm -rf /app/vitepress/dist/*
 
       # 把制品上传到部署机器
-      # - name: Upload to Deploy Server
-      #   uses: appleboy/scp-action@master
-      #   with:
-      #     host: ${{ secrets.HOST }}
-      #     username: ${{ secrets.USERNAME }}
-      #     password: ${{ secrets.PASSWORD }}
-      #     port: ${{ secrets.PORT }}
-      #     source: "dist/"
-      #     target: "/app/vitepress"
+      - name: Upload to Deploy Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: "dist/"
+          target: "/app/vitepress"
 
       # 复制新的
       # - name: Copy new source
