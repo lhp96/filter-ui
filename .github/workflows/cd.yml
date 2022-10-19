@@ -4,11 +4,11 @@ on:
   push:
     branches: main
 jobs:
-  build:
+  CD:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node-version: [15]
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.2.2
@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # 拉取代码
-      - name: Checkout repository
-        uses: actions/checkout@v2
       - name: Building
         run: |
           pnpm docs:build
