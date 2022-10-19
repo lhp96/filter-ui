@@ -25,7 +25,7 @@ const config = {
     lastUpdated: "Last Updated",
     author: "lhp96", //  作者
     authorAvatar: "/bighead.svg", //  作者头像
-    record: "粤ICP备xxxxx号-1",
+    record: "桂ICP备2021001752号-1",
     footer: footer,
   },
 };

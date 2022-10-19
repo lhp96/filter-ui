@@ -1,4 +1,4 @@
 export const footer = {
   message: "Released under the MIT License.",
-  copyright: "粤ICP备xxxx号-1",
+  copyright: "桂ICP备2021001752号-1",
 };
