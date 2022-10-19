@@ -1,6 +1,6 @@
 {
-  "name": "@lhp96/filter-ui",
-  "version": "1.0.3",
+  "name": "filter-ui",
+  "version": "1.0.2",
   "description": "基于Vite+TS+Vue3的定制化组件库",
   "main": "packages/filter/dist/filter-ui.esm.js",
   "files": [
