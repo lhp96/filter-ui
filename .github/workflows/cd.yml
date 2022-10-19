@@ -23,29 +23,30 @@ jobs:
       - name: view directory files
         run: ls -a
       # 基于当前commit进行版本发布(Create a release)，tag_name是v前缀加上package.json的version值
-      # - name: Create GitHub Release
-      #   # 此步骤中，版本发布后会返回对应的url，以供下面上传制品的步骤中读取使用
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     # GITHUB_TOKEN是准备工作步骤三申请的Personal Access Token
-      #     GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
-      #   with:
-      #     tag_name: v${{steps.version.outputs.value}}
-      #     release_name: v${{steps.version.outputs.value}}
-      #     draft: false
-      #     prerelease: false
+      - name: Create GitHub Release
+        # 此步骤中，版本发布后会返回对应的url，以供下面上传制品的步骤中读取使用
+        id: create_release
+        if: contains(github.event.head_commit.message, 'chore(release)')
+        uses: actions/create-release@v1
+        env:
+          # GITHUB_TOKEN是准备工作步骤三申请的Personal Access Token
+          GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+        with:
+          tag_name: v${{steps.version.outputs.value}}
+          release_name: v${{steps.version.outputs.value}}
+          draft: false
+          prerelease: false
       # 把assets.zip上传到仓库对应的发布版本Release上
-      # - name: Update Release Asset
-      #   id: upload-release-asset
-      #   uses: actions/upload-release-asset@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
-      #   with:
-      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
-      #     asset_path: ./assets.zip
-      #     asset_name: assets.zip
-      #     asset_content_type: application/zip
+      - name: Update Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROJECT_ACCESS_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./assets.zip
+          asset_name: assets.zip
+          asset_content_type: application/zip
       # 删除旧的东西
       - name: Remove old source
         uses: appleboy/ssh-action@master
