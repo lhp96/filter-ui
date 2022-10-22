@@ -15,7 +15,11 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Build
-        run: pnpm docs:build
+        run: |
+          cd packages/filter-ui/
+          pnpm build
+          cd ../../
+          pnpm docs:build
       - name: "Publish to the npm registry"
         uses: primer/publish@3.0.0
         env:
