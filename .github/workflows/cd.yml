@@ -26,6 +26,9 @@ jobs:
 
       - name: Building
         run: |
+          cd packages/filter-ui/
+          pnpm build
+          cd ../../
           pnpm docs:build
           zip -r assets ./docs/.vitepress/dist/**
       # 查看打包后的目录文件
