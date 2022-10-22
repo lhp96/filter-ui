@@ -4,7 +4,7 @@ on:
   push:
     branches: publish
 jobs:
-  CD:
+  publish2npm:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -16,10 +16,7 @@ jobs:
         run: pnpm install
       - name: Build
         run: |
-          cd packages/filter-ui/
-          pnpm build
-          cd ../../
-          pnpm docs:build
+          cd packages/filter-ui/ && pnpm build
       - name: "Publish to the npm registry"
         uses: primer/publish@3.0.0
         env:
