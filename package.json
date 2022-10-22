@@ -1,8 +1,8 @@
 {
-  "name": "filter-ui",
+  "name": "@lhp96/filter-ui",
   "version": "1.0.2",
   "description": "基于Vite+TS+Vue3的定制化组件库",
-  "main": "index.js",
+  "main": "dist/filter-ui.esm.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "docs:dev": "vitepress dev docs",
@@ -10,14 +10,14 @@
     "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "luhuipeng <973880264@qq.com>",
+  "private": false,
   "license": "ISC",
   "dependencies": {
-    "vite": "3.0.9",
-    "vitepress-theme-demoblock": "^1.4.2"
+    "vite": "3.0.9"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.16",
+    "vitepress": "1.0.0-alpha.20",
     "vue": "3.2.39"
   }
 }
