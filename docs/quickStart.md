@@ -17,4 +17,24 @@ yarn add @lhp96/filter-ui
 
 # 快速上手
 
-## 按需引入
+在 main.js 中引入下面内容
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+
+import FilterUI from "@lhp96/filter-ui";
+import "@lhp96/filter-ui/dist/entry.css";
+
+createApp(App).use(FilterUI).mount("#app");
+```
+
+## 在组件中使用
+
+```vue
+<template>
+  <div>
+    <SButton color="red">测试按钮</SButton>
+  </div>
+</template>
+```
