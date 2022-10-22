@@ -1,5 +1,6 @@
 import { createApp } from "vue/dist/vue.esm-browser";
-import FilterUI from "./entry";
+import FilterUI from "../dist/filter-ui.esm.js";
+import "../dist/entry.css";
 
 // createApp(SFCButton).mount("#app");
 createApp({
