@@ -1,18 +1,26 @@
 {
   "name": "@lhp96/filter-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于Vite+TS+Vue3的定制化组件库",
-  "main": "dist/filter-ui.esm.js",
+  "main": "packages/filter/dist/filter-ui.esm.js",
+  "files": [
+    "dist",
+    "scripts"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lhp96/filter-ui"
+  },
   "keywords": [],
   "author": "luhuipeng <973880264@qq.com>",
   "private": false,
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "vite": "3.0.9"
   },
