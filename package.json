@@ -4,8 +4,7 @@
   "description": "基于Vite+TS+Vue3的定制化组件库",
   "main": "packages/filter/dist/filter-ui.esm.js",
   "files": [
-    "dist",
-    "scripts"
+    "packages/filter-ui/dist"
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
