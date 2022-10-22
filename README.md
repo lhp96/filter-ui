@@ -29,8 +29,12 @@
 
 1. 安装依赖
 
-```
-pnpm install xxx -D
+```shell
+# npm安装
+npm i @lhp96/filter-ui
+
+# pnpm安装
+pnpm add @lhp96/filter-ui
 ```
 
 2. 引入依赖
